@@ -9,6 +9,11 @@
 </head>
 <body onload="showdata()">
   <div class="main">
+    <div class="popup">
+      <div class="gif">
+        <dotlottie-player  src="https://lottie.host/ec3497d8-742e-4b55-a572-4fe663cdc4a3/ezrtagPV5P.json" background="transparent" speed="1" style="width: 100%; height: 100% ;"  loop autoplay></dotlottie-player></div>
+        <button type="button" onclick="closePopup()">Close</button>
+    </div>
     <div class="navbar">
       <div class="logo"><h1>Weather App</h1></div>
       <div class="searchBar"><input type="text" class="search" placeholder="Search any location"><button type="sumbit" onclick="readValue()">Search</button></div>
@@ -18,10 +23,10 @@
       </div>
       <div class="weatherCard">
         
-
       </div>
     </div>
   </div>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   <script src="weather.js"></script>
 </body>
 </html>
