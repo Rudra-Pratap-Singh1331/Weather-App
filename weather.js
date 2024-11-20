@@ -4,6 +4,7 @@ let Cardcontainer = document.querySelector('.cardContainer')
 let weatherCard=document.querySelector('.weatherCard')
 let bgimg= document.querySelector('.img')
 let span = document.querySelector('.textdata')
+let popup=document.querySelector('.popup')
 let showdata=()=>{
   weatherCard.innerHTML=`<div class="nodata"><h1>Search weather</h1></div>`
 }
@@ -12,9 +13,20 @@ let readValue=()=>{
   console.log(searchField.value)
 }
 let FetchDetails=async (data)=>{
-  let raw = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${data}&appid=${api_key}&units=metric`);
+  try{
+    let date = new Date();
+    let raw = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${data}&appid=${api_key}&units=metric`)
+    let hour = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${data}&appid=${api_key}&units=metric`)
+    let finalhour = await hour.json();
   let FinalResult = await raw.json();
   console.log(FinalResult);
+  console.log(finalhour);
+
+  let newarray= finalhour.list.filter(items=>{
+    let newdate = new Date(items.dt_txt)
+    return ( newdate > date || newdate.getHours() === 0 )  //isko or ache se samjhna ha abhi 
+  })
+  console.log(newarray)
 
   if (FinalResult.main.temp < 0) {
 
@@ -52,9 +64,47 @@ let FetchDetails=async (data)=>{
   }
   weatherCard.innerHTML=`<div class="cityDetails"><h2>${FinalResult.name}</h2></div>
   <div class="temp"><h1>${FinalResult.main.temp}<sup>o</sup>C</h1></div>
-  <div class="condition"><span class="textdata">${FinalResult.weather[0].description}</span></div>
+  <div class="condition"><span class="textdata">${FinalResult.weather[0].main}</span></div>
   <div class="humidity"><span class="textdata">humidity : ${FinalResult.main.humidity} </span></div>
   <div class="windspeed"><span class="textdata">Windspeed : ${FinalResult.wind.speed} </span></div>
   <div class="visibility"><span class="textdata">Visibility: ${FinalResult.visibility}</span></div>
-   <div class="nexthour"><div class="nxt1"></div></div>`
+  <div class="nxthourforecast">next 4 Hours Forecast</div>
+        <div class="nexthour">
+        <div>
+        <div class="nxttemp">${newarray[0].dt_txt.split(" ")[1]}</div>
+        <div class="png">Temp : <br> ${newarray[0].main.temp}<sup>o</sup>C</div>
+          
+        </div>
+        <div>
+        <div class="nxttemp">${newarray[1].dt_txt.split(" ")[1]}</div>
+        <div class="png">Temp : <br> ${newarray[1].main.temp}<sup>o</sup>C</div>
+          </div>
+        <div>
+        <div class="nxttemp">${newarray[2].dt_txt.split(" ")[1]}</div>
+        <div class="png">Temp : <br> ${newarray[2].main.temp}<sup>o</sup>C</div>
+          </div>
+        <div>
+        <div class="nxttemp">${newarray[3].dt_txt.split(" ")[1]}</div>
+        <div class="png">Temp : <br> ${newarray[3].main.temp}<sup>o</sup>C</div>
+          
+        </div>
+      </div>`
+   searchField.value='';
+  }catch(error){
+    generatepopup();
+    searchField.value='';   
+  }
+}
+let generatepopup=()=>{
+  popup.style.visibility='visible'
+  bgimg.innerHTML=''
+  weatherCard.innerHTML=''
+  popup.style.width='30%';
+  popup.style.height='40%';
+}
+let closePopup=()=>{
+  popup.style.visibility='hidden';
+  weatherCard.innerHTML=`<div class="nodata"><h1>Search weather</h1></div>`
+  popup.style.width='0%';
+  popup.style.height='0%';
 }
