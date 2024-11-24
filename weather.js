@@ -142,7 +142,12 @@ let FetchDetails=async (data)=>{
 
   }catch(error){
     generatepopup();
-    searchField.value='';   
+    searchField.value='';
+     searchField.style.borderBottomColor='black'
+          button.style.backgroundColor='black'
+          button.style.color='white'
+          appname.style.color='black'
+    
   }
 }
 let generatepopup=()=>{
