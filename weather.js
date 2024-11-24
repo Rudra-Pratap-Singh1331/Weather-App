@@ -60,181 +60,52 @@ let FetchDetails=async (data)=>{
   if (FinalResult.main.temp < 0) {
         if(date.getHours()>=18){
           bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/1601039994/photo/bow-shaped-milky-way-above-hanles-peak.webp?a=1&b=1&s=612x612&w=0&k=20&c=Jd9lwlkSVmrYpaFy5xdx7oeq5NlPXbVuq5IbMRWDuVA=">`
-          bgimg.style.filter='blur(3px)'
-          searchField.style.borderBottomColor='white'
-          button.style.backgroundColor='white'
-          button.style.color='black'
-          appname.style.color='white'
-          let elements = document.querySelectorAll('.textdata');
-          console.log("Elements to change color:", elements);
-          elements.forEach((element) => {
-            console.log("Changing color of element:", element);
-            element.style.color = 'white'; // Apply white text color
-          });
-          let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-          console.log(element2)
-          element2.forEach((items)=>{
-            items.style.color='white'
-          })
+          bgimg.style.filter='blur(3px)';
+          darktheme();
          
         }else if(date.getHours()>=6 && date.getHours()<=12){
-    bgimg.innerHTML=`<img class="image" src="https://images.unsplash.com/photo-1703510092630-6d6a89cfa6e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
-    bgimg.style.filter='blur(3px)'
-    searchField.style.borderBottomColor='black'
-          button.style.backgroundColor='black'
-          button.style.color='white'
-          appname.style.color='black'
-          let elements = document.querySelectorAll('.textdata');
-          console.log("Elements to change color:", elements);
-          elements.forEach((element) => {
-            console.log("Changing color of element:", element);
-            element.style.color = 'black'; // Apply white text color
-          });
-          let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-          console.log(element2)
-          element2.forEach((items)=>{
-            items.style.color='black'
-          })
+          bgimg.innerHTML=`<img class="image" src="https://images.unsplash.com/photo-1703510092630-6d6a89cfa6e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
+          bgimg.style.filter='blur(3px)'
+          lightmode();
   }
     else{
       bgimg.innerHTML=`<img src="https://images.unsplash.com/photo-1703510092630-6d6a89cfa6e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
       bgimg.style.filter='blur(3px)'
-      searchField.style.borderBottomColor='black'
-          button.style.backgroundColor='black'
-          button.style.color='white'
-          appname.style.color='black'
-          let elements = document.querySelectorAll('.textdata');
-          console.log("Elements to change color:", elements);
-          elements.forEach((element) => {
-            console.log("Changing color of element:", element);
-            element.style.color = 'black'; // Apply white text color
-          });
-          let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-          console.log(element2)
-          element2.forEach((items)=>{
-            items.style.color='black'
-          })
+      lightmode();
     }
      // Freezing
   } else if (FinalResult.main.temp >= 0 && FinalResult.main.temp <= 15) {
     if(date.getHours()>=18){
       bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/1601039994/photo/bow-shaped-milky-way-above-hanles-peak.webp?a=1&b=1&s=612x612&w=0&k=20&c=Jd9lwlkSVmrYpaFy5xdx7oeq5NlPXbVuq5IbMRWDuVA=">`
       bgimg.style.filter='blur(3px)'
-      searchField.style.borderBottomColor='white'
-      button.style.backgroundColor='white'
-      button.style.color='black'
-      appname.style.color='white'
-      let elements = document.querySelectorAll('.textdata');
-      console.log("Elements to change color:", elements);
-      elements.forEach((element) => {
-        console.log("Changing color of element:", element);
-        element.style.color = 'white'; // Apply white text color
-      });
-      let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-      console.log(element2)
-      element2.forEach((items)=>{
-        items.style.color='white'
-      })
+      darktheme();
     }
      else{
     bgimg.innerHTML=`<img class="image" src="https://images.unsplash.com/photo-1487621167305-5d248087c724?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
     bgimg.style.filter='blur(7px)'
-    searchField.style.borderBottomColor='black'
-          button.style.backgroundColor='black'
-          button.style.color='white'
-          appname.style.color='black'
-          let elements = document.querySelectorAll('.textdata');
-          console.log("Elements to change color:", elements);
-          elements.forEach((element) => {
-            console.log("Changing color of element:", element);
-            element.style.color = 'black'; // Apply white text color
-          });
-          let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-          console.log(element2)
-          element2.forEach((items)=>{
-            items.style.color='black'
-          }) 
+    lightmode();
   }
   
   } 
   else if (FinalResult.main.temp > 15 && FinalResult.main.temp <= 25) {
     if(date.getHours()>=18){
-      bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/1601039994/photo/bow-shaped-milky-way-above-hanles-peak.webp?a=1&b=1&s=612x612&w=0&k=20&c=Jd9lwlkSVmrYpaFy5xdx7oeq5NlPXbVuq5IbMRWDuVA=">`
-      bgimg.style.filter='blur(3px)'
-      searchField.style.borderBottomColor='white'
-      button.style.backgroundColor='white'
-      button.style.color='black'
-      appname.style.color='white'
-      let elements = document.querySelectorAll('.textdata');
-      console.log("Elements to change color:", elements);
-      elements.forEach((element) => {
-        console.log("Changing color of element:", element);
-        element.style.color = 'white'; // Apply white text color
-      });
-      let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-      console.log(element2)
-      element2.forEach((items)=>{
-        items.style.color='white'
-      })
-     
+     darktheme();
     }else{
     bgimg.innerHTML=`<img class="image" src="https://images.unsplash.com/photo-1583054968714-b8d4317377b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWlsZCUyMHdlYXRoZXJ8ZW58MHx8MHx8fDA%3D">`
     bgimg.style.filter='blur(7px)'
-    searchField.style.borderBottomColor='black'
-    button.style.backgroundColor='black'
-    button.style.color='white'
-    appname.style.color='black'
-    let elements = document.querySelectorAll('.textdata');
-    console.log("Elements to change color:", elements);
-    elements.forEach((element) => {
-      console.log("Changing color of element:", element);
-      element.style.color = 'black'; // Apply white text color
-    });
-    let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-    console.log(element2)
-    element2.forEach((items)=>{
-      items.style.color='black'
-    })
+   lightmode();
   }
   }
    else if (FinalResult.main.temp > 25 && FinalResult.main.temp <= 35) {
     if(date.getHours()>=18){
       bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/1601039994/photo/bow-shaped-milky-way-above-hanles-peak.webp?a=1&b=1&s=612x612&w=0&k=20&c=Jd9lwlkSVmrYpaFy5xdx7oeq5NlPXbVuq5IbMRWDuVA=">`
       bgimg.style.filter='blur(3px)'
-      searchField.style.borderBottomColor='white'
-      button.style.backgroundColor='white'
-      button.style.color='black'
-      appname.style.color='white'
-      let elements = document.querySelectorAll('.textdata');
-      console.log("Elements to change color:", elements);
-      elements.forEach((element) => {
-        console.log("Changing color of element:", element);
-        element.style.color = 'white'; // Apply white text color
-      });
-      let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-      console.log(element2)
-      element2.forEach((items)=>{
-        items.style.color='white'
-      })
+      darktheme();
      
     }else{
     bgimg.innerHTML=`<img class="image" src="https://images.unsplash.com/photo-1565677913671-ce5a5c0ae655?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
     bgimg.style.filter='blur(7px)'
-    searchField.style.borderBottomColor='black'
-    button.style.backgroundColor='black'
-    button.style.color='white'
-    appname.style.color='black'
-    let elements = document.querySelectorAll('.textdata');
-    console.log("Elements to change color:", elements);
-    elements.forEach((element) => {
-      console.log("Changing color of element:", element);
-      element.style.color = 'black'; // Apply white text color
-    });
-    let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-    console.log(element2)
-    element2.forEach((items)=>{
-      items.style.color='black'
-    })
+    lightmode();
   }
   
   }
@@ -242,40 +113,10 @@ let FetchDetails=async (data)=>{
     if(date.getHours()>=18){
       bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/1601039994/photo/bow-shaped-milky-way-above-hanles-peak.webp?a=1&b=1&s=612x612&w=0&k=20&c=Jd9lwlkSVmrYpaFy5xdx7oeq5NlPXbVuq5IbMRWDuVA=">`
       bgimg.style.filter='blur(3px)'
-      searchField.style.borderBottomColor='white'
-      button.style.backgroundColor='white'
-      button.style.color='black'
-      appname.style.color='white'
-      let elements = document.querySelectorAll('.textdata');
-      console.log("Elements to change color:", elements);
-      elements.forEach((element) => {
-        console.log("Changing color of element:", element);
-        element.style.color = 'white'; // Apply white text color
-      });
-      let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-      console.log(element2)
-      element2.forEach((items)=>{
-        items.style.color='white'
-      })
+     darktheme();
      
     }else{
-    bgimg.innerHTML=`<img class="image" src="https://images.unsplash.com/photo-1487621167305-5d248087c724?q=80&w=1932&auto=format&fit=crop&ixlibhttps://media.istockphoto.com/id/1254065595/photo/hot-summer-or-heat-wave-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=TrdzfkrLvvrvp5CWEqh5C2DNS13jrgLo849g6T583So=">`
-    bgimg.style.filter='blur(7px)'
-    searchField.style.borderBottomColor='black'
-    button.style.backgroundColor='black'
-    button.style.color='white'
-    appname.style.color='black'
-    let elements = document.querySelectorAll('.textdata');
-    console.log("Elements to change color:", elements);
-    elements.forEach((element) => {
-      console.log("Changing color of element:", element);
-      element.style.color = 'black'; // Apply white text color
-    });
-    let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-    console.log(element2)
-    element2.forEach((items)=>{
-      items.style.color='black'
-    })
+   lightmode();
     }
   }
 
@@ -325,4 +166,39 @@ let calcwidthhieght=()=>{
       popup.style.width='30%';
   popup.style.height='40%';
   }
+}
+let darktheme=()=>{
+  
+          searchField.style.borderBottomColor='white'
+          button.style.backgroundColor='white'
+          button.style.color='black'
+          appname.style.color='white'
+          let elements = document.querySelectorAll('.textdata');
+          console.log("Elements to change color:", elements);
+          elements.forEach((element) => {
+            console.log("Changing color of element:", element);
+            element.style.color = 'white'; // Apply white text color
+          });
+          let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
+          console.log(element2)
+          element2.forEach((items)=>{
+            items.style.color='white'
+          })
+}
+let lightmode =()=>{
+          searchField.style.borderBottomColor='black'
+          button.style.backgroundColor='black'
+          button.style.color='white'
+          appname.style.color='black'
+          let elements = document.querySelectorAll('.textdata');
+          console.log("Elements to change color:", elements);
+          elements.forEach((element) => {
+            console.log("Changing color of element:", element);
+            element.style.color = 'black'; // Apply white text color
+          });
+          let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
+          console.log(element2)
+          element2.forEach((items)=>{
+            items.style.color='black'
+          })
 }
