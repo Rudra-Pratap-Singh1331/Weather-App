@@ -1,16 +1,20 @@
 *{
   margin: 0;
   padding: 0;
+  
+  box-sizing: border-box;
   scrollbar-width: none;
 }
 html,body{
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .main{
   width: 100vw;
   height: 100vh;
   background-color: rgb(255, 255, 255);
+  overflow: hidden;
 }
 .navbar{
   width:100%;
@@ -46,6 +50,7 @@ html,body{
   border:none;
   height: 100%;
   width:50%;
+  font-weight: bold;
 }
 .searchBar>input{
   width: 100%;
@@ -73,6 +78,7 @@ html,body{
   justify-content: center;
   position: absolute;
   z-index: 0;
+  overflow: hidden;
 }
 .img{
   width: 100%;
@@ -84,11 +90,12 @@ html,body{
 }
 .image{
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 100vh;
+  
 }
 .textJS{
   color: black;
+ background-color: white;
 }
 .nodata{
   color: black;
@@ -105,12 +112,46 @@ html,body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+ 
   background-color: rgba(165, 42, 42, 0);
   color: rgb(0, 0, 0);
 
 }
+.nxthourforecast{
+  width:100%;
+  height: auto;
+  margin-top: 7%;
+  text-decoration: underline;
+  margin-left: 4%;
+  font-family: lato;
+  font-size: 18px;
+  font-weight: bold;
+}
+.nexthour{
+  margin-top: 7%;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
 
+}
+.nexthour>div{
+  width: auto;
+  background-color: rgba(255, 255, 255, 0);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  font-family: lato;
+  font-weight: bold;
+  padding-right: 10px;
+  border-right: 2px dashed;
+  
+}
 .cityDetails{
   width: 100%;
   height: auto;
@@ -162,6 +203,49 @@ html,body{
   font-family: lato;
   font-weight: bold;
 }
+.popup{
+  width: 0%;
+  height:0%;
+  position: absolute;
+  z-index:5;
+  background-color: rgb(255, 255, 255);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-evenly;
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
+  
+}
+.gif{
+  width: 100%;
+  height: 70%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup>button{
+    width: 30%;
+    height: auto;
+    color: white;
+    font-family: lato;
+    background-color: black;
+    border:none;
+    padding:10px 10px;
+    font-size:17px;
+    border-radius: 25px;
+    cursor: pointer;
+    
+}
+
+
 @media screen and (max-width:700px) and (min-width:550px) {
   .searchBar>input{
     width: 100%;
@@ -367,30 +451,46 @@ html,body{
   }
   .searchBar>input::placeholder{
     font-family: lato;
-    font-size: 13px;
+    font-size: 20px;
   }
   .searchBar{
-    width: 46%;
+    width: 70%;
     height: 40%;
     
   }
   .searchBar>button{
     
     height: 100%;
-    width:60%;
+    width:40%;
+    font-size: 16px;
   }
   .navbar{
     width:100%;
     height: 10vh;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 80px;
   
     /* border-bottom: 2px solid rgba(179, 179, 179, 0.536); */
   }
   .logo{
     font-family: lato;
     margin-top: 2%;
+  }
+  .weatherCard{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    background-color: rgba(165, 42, 42, 0);
+    color: rgb(0, 0, 0);
+  
   }
 }
 @media screen  and (max-width:399px) and (min-width:300px) {
@@ -403,12 +503,12 @@ html,body{
     font-size: 13px;
   }
   .searchBar{
-    width: 70%;
+    width: 80%;
     height: 40%;
   }
   .searchBar>button{
     height: 100%;
-    width:60%;
+    width:40%;
   }
   .navbar{
     width:100%;
@@ -416,7 +516,52 @@ html,body{
 
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 70px;
+   
+    /* border-bottom: 2px solid rgba(179, 179, 179, 0.536); */
+  }
+
+  .weatherCard{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    background-color: rgba(165, 42, 42, 0);
+    color: rgb(0, 0, 0);
+  
+  }
+
+}
+@media screen  and (width:344px) {
+  .searchBar>input{
+    width: 100%;
+    height: 100%;
+  }
+  .searchBar>input::placeholder{
+    font-family: lato;
+    font-size: 20px;
+  }
+  .searchBar{
+    width: 80%;
+    height: 40%;
+  }
+  .searchBar>button{
+    height: 100%;
+    width:50%;
+  }
+  .navbar{
+    width:100%;
+    height: 10vh;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
    
     /* border-bottom: 2px solid rgba(179, 179, 179, 0.536); */
   }
@@ -424,4 +569,302 @@ html,body{
     font-family: lato;
     margin-top: 2%;
   }
+  .weatherCard{
+
+
+    margin-top: 30%;
+ 
+  }
+  .temp{
+    font-size: 30px;
+ 
+  }
+  .condition{
+  
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 17px;
+  
+  }
+  .visibility,.humidity,.windspeed{
+    padding-left: 29%;
+  
+  }
+  .nxthourforecast{
+    margin-left: 50%;
+ 
+  }
+}
+@media screen and (max-width:1025px) and (min-width:768px){
+  
+.cityDetails{
+  font-size: 30px;
+}
+.temp{
+
+  font-size: 60px;
+ 
+}
+.condition{
+
+  font-size: 27px;
+  
+}
+.visibility,.humidity,.windspeed{
+  font-size: 23px;
+}
+.nxthourforecast{
+  font-size: 28px;
+}
+.nxttemp,.png{
+  font-size: 25px;
+}
+.searchBar{
+  width: 40%;
+
+}
+.searchBar>button{
+  width: 40%;
+  font-size: 20px;
+}
+.searchBar>input::placeholder{
+  font-size: 20px;
+  color:black;
+}
+}
+@media screen and (max-width:376px) and (min-width:359px) {
+  .searchBar>input{
+    width: 100%;
+    height: 100%;
+  }
+  .searchBar>input::placeholder{
+    font-family: lato;
+    font-size: 13px;
+  }
+  .searchBar{
+    width: 80%;
+    height: 40%;
+  }
+  .searchBar>button{
+    height: 100%;
+    width:40%;
+  }
+  .navbar{
+    width:100%;
+    height: 20vh;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+   
+    /* border-bottom: 2px solid rgba(179, 179, 179, 0.536); */
+  }
+  .logo{
+    font-family: lato;
+    margin-top: 2%;
+  }
+  .weatherCard{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    background-color: rgba(165, 42, 42, 0);
+    color: rgb(0, 0, 0);
+  
+  }
+  .cityDetails{
+      font-size: 15px;
+  }
+  .temp{
+   
+    font-size: 25px;
+  }
+  .visibility,.humidity,.windspeed{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 192, 203, 0);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 17px;
+    padding-left: 36%;
+    color: rgb(0, 0, 0);
+    font-family: lato;
+    font-weight: bold;
+  }
+  .popup{
+    width: 0%;
+    height:0%;
+    position: absolute;
+    z-index:5;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+    
+  }
+  .gif{
+    width: 100%;
+    height: 70%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .popup>button{
+      width: 30%;
+      height: auto;
+      padding:10px 10px;
+      font-size:17px;
+      
+  }
+}
+@media screen and (width:1024px) and (height:600px){
+  .searchBar{
+    width: 40%;
+    height: 50%;
+  }
+  .searchBar>button{
+    height: 100%;
+    width:40%;
+  }
+  .navbar{
+    width:100%;
+    height: 10vh;
+
+    flex-direction: row;
+    align-items: center;
+
+    /* border-bottom: 2px solid rgba(179, 179, 179, 0.536); */
+  }
+
+  .weatherCard{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12%;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    
+  
+  }
+  .cityDetails{
+    font-size: 20px;
+    height: 10%;
+  }
+  .temp{
+    font-size: 25px;
+  }
+  .condition{
+    height:2%;
+    font-size: 23px;
+    
+  }
+  .visibility,.humidity,.windspeed{
+    font-size:17px;
+    padding-left:40%;
+    height: 5%;
+  }
+  .nxthourforecast{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+  }
+  .nxttemp,.png{
+    font-size: 15px;
+  }
+  .searchBar{
+    width: 40%;
+  
+  }
+  .searchBar>button{
+    width: 40%;
+    font-size: 20px;
+  }
+  .searchBar>input::placeholder{
+    font-size: 20px;
+    color:black;
+  }
+  .nexthour{
+    margin-top: 3%;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    gap: 43px;
+  
+  }
+  .nexthour>div{
+    padding-left: 20px;
+    padding-right: 10px;
+    border-right: 2px dashed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media  screen and (width : 540px) and (height : 720px) {
+
+    .searchBar{
+    width: 40%;
+    height: 50%;
+  }
+  .searchBar>button{
+    height: 100%;
+    width:40%;
+  }
+  .navbar{
+    width:100%;
+    height: 10vh;
+
+    flex-direction: row;
+    align-items: center;
+
+    /* border-bottom: 2px solid rgba(179, 179, 179, 0.536); */
+  }
+
+  .weatherCard{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12%;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    
+  
+  }
+
+
 }
