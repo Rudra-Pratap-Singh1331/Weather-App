@@ -155,7 +155,7 @@ let FetchDetails=async (data)=>{
 
   }catch(error){
     searchField.value='';
-     
+     searchField.style.color='black';
     generatepopup();
     
     
@@ -170,7 +170,7 @@ let generatepopup=()=>{
           button.style.backgroundColor='black'
           button.style.color='white'
           appname.style.color='black'
-  searchField.style.color='black';
+  
   // popup.style.width='30%';
   // popup.style.height='40%';
 }
