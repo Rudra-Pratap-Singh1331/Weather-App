@@ -94,7 +94,7 @@ let FetchDetails=async (data)=>{
   } 
   else if (FinalResult.weather[0].main == 'Clear') {
     if(date.getHours()>=18){
-       bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/162515751/photo/moon-over-mountains.jpg?s=612x612&w=0&k=20&c=mKsWiAqN8lOGl6bdnDg9ssY25RSJJbSOk3g0MuDZNXw=">`
+       bgimg.innerHTML=`<img class="image" src="https://images.unsplash.com/photo-1680542993889-078ce9c8538a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xlYXIlMjBuaWdodHxlbnwwfHwwfHx8MA%3D%3D">`
      bgimg.style.filter='blur(3px)'
      darktheme();
     }
@@ -211,6 +211,7 @@ let calcwidthhieght=()=>{
 let darktheme=()=>{
   
           searchField.style.borderBottomColor='white'
+          searchField.style.color='white';
           button.style.backgroundColor='white'
           button.style.color='black'
           appname.style.color='white'
