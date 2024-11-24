@@ -138,15 +138,26 @@ let FetchDetails=async (data)=>{
           bgimg.style.filter='blur(3px)'
           lightmode();
           }
+  }else if (FinalResult.weather[0].main=='Snow'){
+     if(date.getHours()>=18){
+      bgimg.innerHTML=`<img class="image" src="https://plus.unsplash.com/premium_photo-1685977494926-d1f8efd44c3c?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
+      bgimg.style.filter='blur(3px)'
+      darktheme();
+     }else{
+       bgimg.innerHTML=`<img class="image" src="https://images.unsplash.com/photo-1589218112660-81ef972e89e3?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
+      bgimg.style.filter='blur(3px)'
+     }
+  }else{
+     bgimg.innerHTML=`<img class="image" src=" https://images.unsplash.com/photo-1505404919723-002ecad81b92?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHJpenpsZSUyMHdhdGhlcnxlbnwwfHwwfHx8MA%3D%3D">`
+      bgimg.style.filter='blur(3px)'
+    
   }
 
   }catch(error){
-    generatepopup();
     searchField.value='';
-     searchField.style.borderBottomColor='black'
-          button.style.backgroundColor='black'
-          button.style.color='white'
-          appname.style.color='black'
+     
+    generatepopup();
+    
     
   }
 }
@@ -155,6 +166,10 @@ let generatepopup=()=>{
   bgimg.innerHTML=''
   weatherCard.innerHTML=''
   calcwidthhieght();
+  searchField.style.borderBottomColor='black'
+          button.style.backgroundColor='black'
+          button.style.color='white'
+          appname.style.color='black'
   // popup.style.width='30%';
   // popup.style.height='40%';
 }
