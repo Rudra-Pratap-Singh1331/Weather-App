@@ -57,7 +57,7 @@ let FetchDetails=async (data)=>{
         </div>
       </div>`
    searchField.value='';
-  if (FinalResult.weather[0].main === 'Clouds') {
+  if (FinalResult.weather[0].main == 'Clouds') {
         if(date.getHours()>=18){
           bgimg.innerHTML=`<img class="image" src="https://img.freepik.com/premium-photo/full-moon-cloudy-night-sky-aesthetic-background_198067-173620.jpg">`  //clody night image
           bgimg.style.filter='blur(3px)';
@@ -74,7 +74,7 @@ let FetchDetails=async (data)=>{
           lightmode();
           }
      // Freezing
-  } else if (FinalResult.weather[0].main === 'Haze') {
+  } else if (FinalResult.weather[0].main == 'Haze') {
     if(date.getHours()>=18){
       bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/614122930/photo/spooky-foggy-forest.jpg?s=612x612&w=0&k=20&c=jBKT8Ku8a5VGMclYsX3LttZUpsbVdfO-XSeYQEQIqUs=">`
       bgimg.style.filter='blur(3px)'
@@ -92,7 +92,7 @@ let FetchDetails=async (data)=>{
   }
   
   } 
-  else if (FinalResult.weather[0].main === 'Clear') {
+  else if (FinalResult.weather[0].main == 'Clear') {
     if(date.getHours()>=18){
        bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/162515751/photo/moon-over-mountains.jpg?s=612x612&w=0&k=20&c=mKsWiAqN8lOGl6bdnDg9ssY25RSJJbSOk3g0MuDZNXw=">`
      bgimg.style.filter='blur(3px)'
@@ -109,7 +109,7 @@ let FetchDetails=async (data)=>{
    lightmode();
   }
   }
-   else if (FinalResult.weather[0].main === 'Rain') {
+   else if (FinalResult.weather[0].main == 'Rain') {
     if(date.getHours()>=18){
       bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/831057314/photo/rain-night.jpg?s=612x612&w=0&k=20&c=Ir3t1WiPDHmbOAY3cDqduhjLW-JUAZg2F1Izn_r0l5M=">`
       bgimg.style.filter='blur(3px)'
@@ -127,7 +127,7 @@ let FetchDetails=async (data)=>{
   }
   
   }
-   else if (FinalResult.weather[0].main === 'Thunderstorm') {
+   else if (FinalResult.weather[0].main == 'Thunderstorm') {
     if(date.getHours()>=18){
       bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/1318748572/photo/massive-lightning-strike-over-the-brisbane-city-suburbs-lights.jpg?s=612x612&w=0&k=20&c=9Z5tynrQYH3E0fruCBlwIbgsgbdu5_DHxLbSu44o3co=">`
       bgimg.style.filter='blur(3px)'
