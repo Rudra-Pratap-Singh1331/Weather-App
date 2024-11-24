@@ -158,6 +158,7 @@ let closePopup=()=>{
   weatherCard.innerHTML=`<div class="nodata"><h1>Search weather</h1></div>`
   popup.style.width='0%';
   popup.style.height='0%';
+  appname.style.color = 'black'; 
 }
 let calcwidthhieght=()=>{
   const width = window.innerWidth;
