@@ -30,9 +30,9 @@ let FetchDetails=async (data)=>{
   weatherCard.innerHTML=`<div class="cityDetails"><h2>${FinalResult.name}</h2></div>
   <div class="temp"><h1>${FinalResult.main.temp}<sup>o</sup>C</h1></div>
   <div class="condition"><span class="textdata">${FinalResult.weather[0].main}</span></div>
-  <div class="humidity"><span class="textdata">humidity : ${FinalResult.main.humidity} </span></div>
-  <div class="windspeed"><span class="textdata">Windspeed : ${FinalResult.wind.speed} </span></div>
-  <div class="visibility"><span class="textdata">Visibility: ${FinalResult.visibility}</span></div>
+  <div class="humidity"><span class="textdata">humidity : ${FinalResult.main.humidity} % </span></div>
+  <div class="windspeed"><span class="textdata">Windspeed : ${FinalResult.wind.speed} meter/sec </span></div>
+  <div class="visibility"><span class="textdata">Visibility: ${FinalResult.visibility} meter</span></div>
   <div class="nxthourforecast">next 4 Hours Forecast</div>
         <div class="nexthour">
         <div>
