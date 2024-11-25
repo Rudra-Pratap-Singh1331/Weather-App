@@ -64,7 +64,7 @@ let FetchDetails=async (data)=>{
           darktheme();
          
         }else if(date.getHours()>=6 && date.getHours()<=12){
-          bgimg.innerHTML=`<img class="image" src="https://images.unsplash.com/photo-1519541312928-0872bb28207b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
+          bgimg.innerHTML=`<img class="image" src="https://unsplash.com/photos/white-cloud-ICFXCD0VBvI8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
           bgimg.style.filter='blur(3px)'
           lightmode();
           }
