@@ -220,7 +220,7 @@ let darktheme=()=>{
       let elements = document.querySelectorAll('.textdata');
       
       elements.forEach((element) => {
-        console.log("Changing color of element:", element);
+      
         element.style.color = 'white'; 
       });
       let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
