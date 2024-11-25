@@ -18,8 +18,7 @@ let FetchDetails=async (data)=>{
   try{
     let date = new Date();
     let raw = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${data}&appid=${api_key}&units=metric`)
-    let hour = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${data}&appid=${api_key}&units=metric`)
-    let finalhour = await hour.json();
+  
   let FinalResult = await raw.json();
   console.log(FinalResult);
   console.log(finalhour);
