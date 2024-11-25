@@ -218,13 +218,13 @@ let darktheme=()=>{
       button.style.color='black'
       appname.style.color='white'
       let elements = document.querySelectorAll('.textdata');
-      console.log("Elements to change color:", elements);
+      
       elements.forEach((element) => {
         console.log("Changing color of element:", element);
-        element.style.color = 'white'; // Apply white text color
+        element.style.color = 'white'; 
       });
       let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-      console.log(element2)
+      
       element2.forEach((items)=>{
         items.style.color='white'
       })
@@ -235,13 +235,12 @@ let lightmode =()=>{
       button.style.color='white'
       appname.style.color='black'
       let elements = document.querySelectorAll('.textdata');
-      console.log("Elements to change color:", elements);
+      
       elements.forEach((element) => {
-        console.log("Changing color of element:", element);
+
         element.style.color = 'black'; // Apply white text color
       });
       let element2 =document.querySelectorAll('.cityDetails,.temp,.nxthourforecast,.nxttemp,.png,.nexthour>div')
-      console.log(element2)
       element2.forEach((items)=>{
         items.style.color='black'
       })
