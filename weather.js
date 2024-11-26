@@ -62,12 +62,12 @@ let FetchDetails=async (data)=>{
       darktheme();
      
     }else if(date.getHours()>=6 && date.getHours()<=12){
-      bgimg.innerHTML=`<img class="image" src="https://unsplash.com/photos/a-plane-flying-through-a-cloudy-blue-sky-KZPIHQvOIvQ">`
+      bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/1088909334/photo/sea-of-clouds-above-the-stratosphere.webp?a=1&b=1&s=612x612&w=0&k=20&c=tHAUP9yGfewerlRxkkt602zpBrPSY78tHjWjQXGRwLk=">`
       bgimg.style.filter='blur(3px)'
       lightmode();
       }
     else{
-      bgimg.innerHTML=`<img src="https://media.istockphoto.com/id/1300986545/photo/aerial-cinematic-shot-of-the-long-sprawling-suburbs-of-ljubljana-on-a-cloudy-day.jpg?s=612x612&w=0&k=20&c=b2PnJH_4zth91WnkgmEUQ-1-HfbuxzLVQL_STp0dC4k=">`
+      bgimg.innerHTML=`<img src="https://media.istockphoto.com/id/1088909334/photo/sea-of-clouds-above-the-stratosphere.webp?a=1&b=1&s=612x612&w=0&k=20&c=tHAUP9yGfewerlRxkkt602zpBrPSY78tHjWjQXGRwLk=">`
       bgimg.style.filter='blur(3px)'
       lightmode();
       }
@@ -79,12 +79,12 @@ if(date.getHours()>=18){
   darktheme();
 }
   else if(date.getHours()>=6 && date.getHours()<=12){
-      bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/1089026982/photo/image-of-winter-fog-scene-in-delhi-with-india-gate-as-a-background.jpg?s=612x612&w=0&k=20&c=rXSudGCCelYGe1O4y8Ix3txjVC-UdBlCLa8DIgRr4mg=">`
+      bgimg.innerHTML=`<img class="image" src="https://plus.unsplash.com/premium_photo-1732024931367-b2462bfdff70?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
       bgimg.style.filter='blur(3px)'
       lightmode();
       }
  else{
-bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/2181297300/photo/close-up-of-a-motorbike-on-field-against-trees.jpg?s=612x612&w=0&k=20&c=4BxWxIJDBiXec_pDoV_rsw2MRs5aV1e2I0ZxKgu0Lr4=">`
+bgimg.innerHTML=`<img class="image" src="https://plus.unsplash.com/premium_photo-1732024931367-b2462bfdff70?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
 bgimg.style.filter='blur(7px)'
 lightmode();
 }
@@ -114,12 +114,12 @@ if(date.getHours()>=18){
   darktheme();
  
 }else if(date.getHours()>=6 && date.getHours()<=12){
-      bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/819632426/photo/raindrops-on-glass-window.jpg?s=612x612&w=0&k=20&c=pdVUIcdeUxOKCV5B7WOS8oYzxyHL9ADuYnxnt0_0glE=">`
+      bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/1358918776/photo/water-drops-on-the-stalks-of-the-field-grass-natural-plant-texture-in-green-natural-tones.jpg?s=612x612&w=0&k=20&c=Dbjc_v1JQOTLK8lcDWA_-C0M3m_3BU1FIez9c_H947w=">`
       bgimg.style.filter='blur(3px)'
       lightmode();
       }
 else{
-bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/453684353/photo/rain-at-the-fields.jpg?s=612x612&w=0&k=20&c=JXVnwl83Oifw3ook_yhZy9IIeHm2Ey6PrxgZUK1_vZs=">`
+bgimg.innerHTML=`<img class="image" src="https://media.istockphoto.com/id/1358918776/photo/water-drops-on-the-stalks-of-the-field-grass-natural-plant-texture-in-green-natural-tones.jpg?s=612x612&w=0&k=20&c=Dbjc_v1JQOTLK8lcDWA_-C0M3m_3BU1FIez9c_H947w=">`
 bgimg.style.filter='blur(7px)'
 lightmode();
 }
