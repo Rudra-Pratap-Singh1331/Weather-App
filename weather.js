@@ -62,7 +62,7 @@ let FetchDetails=async (data)=>{
       darktheme();
      
     }else if(date.getHours()>=6 && date.getHours()<=12){
-      bgimg.innerHTML=`<img class="image" src="https://unsplash.com/photos/white-cloud-ICFXCD0VBvI8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">`
+      bgimg.innerHTML=`<img class="image" src="https://unsplash.com/photos/a-plane-flying-through-a-cloudy-blue-sky-KZPIHQvOIvQ">`
       bgimg.style.filter='blur(3px)'
       lightmode();
       }
